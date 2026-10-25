@@ -1,0 +1,73 @@
+/* EDIT: warna dan font ada di sini */
+:root{
+  --bg:#fff; --text:#0a0a0a; --muted:#555; --accent:#1d4ed8; --line:#0a0a0a;
+  --font:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:var(--font);color:var(--text);background:var(--bg);line-height:1.65;font-size:17px}
+.container{width:min(1040px,92%);margin:0 auto}
+h1,h2,h3{line-height:1.2;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(2rem,5vw,3.2rem)}
+h2{font-size:2rem;margin-bottom:24px}
+h3{font-size:1.1rem;margin-bottom:6px}
+p{margin:0 0 12px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* navbar */
+.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);border-bottom:1.5px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:700;text-decoration:none}
+nav a{margin-left:24px;text-decoration:none;color:var(--muted);font-size:.95rem}
+nav a:hover{color:var(--accent)}
+.burger{display:none;background:none;border:1.5px solid var(--line);border-radius:8px;padding:6px 12px;font:inherit;cursor:pointer}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;min-height:calc(100vh - 60px);padding:40px 0}
+.hello{color:var(--accent);font-weight:600}
+.lead{color:var(--muted);font-size:1.1rem;margin:16px 0 28px;max-width:34em}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 20px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--text);font:inherit;font-weight:600;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{box-shadow:3px 3px 0 var(--line)}
+.avatar{position:relative;width:min(320px,80%);aspect-ratio:1;justify-self:center;border:1.5px solid var(--line);border-radius:24px;box-shadow:12px 12px 0 var(--accent);background:#f3f6ff;display:grid;place-items:center;overflow:hidden}
+.avatar span{font-size:4.5rem;font-weight:800;color:var(--accent)}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* sections */
+.section{padding:72px 0;border-top:1.5px solid var(--line)}
+.about{max-width:40em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{display:block;padding:22px;border:1.5px solid var(--line);border-radius:12px;background:#fff;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--accent)}
+.card p{color:var(--muted);font-size:.95rem}
+.icon{display:inline-grid;place-items:center;width:42px;height:42px;margin-bottom:12px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700}
+.thumb{height:130px;margin-bottom:14px;border:1.5px solid var(--line);border-radius:8px;background:#f3f6ff;color:var(--accent);display:grid;place-items:center;font-size:2.6rem;font-weight:700}
+.tags{color:var(--accent)!important;font-weight:600;font-size:.88rem!important}
+.contacts{display:flex;gap:16px;flex-wrap:wrap}
+.card.link{display:flex;align-items:center;gap:12px;padding:14px 20px;text-decoration:none;font-weight:600}
+.card.link .icon{margin:0}
+
+footer{border-top:1.5px solid var(--line);padding:24px 0;text-align:center;color:var(--muted);font-size:.9rem}
+
+/* dialog detail proyek */
+dialog{width:min(440px,90%);border:1.5px solid var(--line);border-radius:14px;padding:24px;box-shadow:8px 8px 0 var(--accent)}
+dialog::backdrop{background:rgba(0,0,0,.4)}
+
+/* animasi scroll sederhana */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+/* HP */
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;min-height:0;padding:40px 0 56px}
+  .avatar{order:-1;width:200px}
+  .burger{display:block}
+  nav{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1.5px solid var(--line);padding:8px 4%}
+  nav.open{display:flex}
+  nav a{margin:0;padding:12px 0}
+  .section{padding:52px 0}
+}

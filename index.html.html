@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- EDIT: judul tab browser -->
+<title>Farhan Habib | Portofolio</title>
+<meta name="description" content="Portofolio Farhan Habib, mahasiswa Teknologi Rekayasa Elektro UGM.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-in">
+    <a href="#home" class="logo">Farhan Habib</a>
+    <button class="burger" aria-label="Buka menu" aria-expanded="false">Menu</button>
+    <nav id="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="container hero">
+    <div class="hero-text">
+      <p class="hello">Halo, saya Farhan Habib</p>
+      <h1>Mahasiswa dan calon profesional di bidang energi terbarukan</h1>
+      <p class="lead">Mahasiswa Teknologi Rekayasa Elektro UGM angkatan 2026 yang ingin mengembangkan teknologi energi ramah lingkungan.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">Lihat Proyek</a>
+        <a class="btn" href="#contact">Hubungi Saya</a>
+      </div>
+    </div>
+    <!-- EDIT: taruh foto bernama foto.jpg di folder ini; jika tidak ada, inisial yang tampil -->
+    <div class="avatar"><span>FH</span><img src="foto.jpg" alt="Foto Farhan Habib" onerror="this.remove()"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="container section">
+    <h2>About</h2>
+    <div class="about">
+      <p>Perkenalkan, nama saya Farhan Habib. Saya lulusan SMA IT Insan Cendekia Payakumbuh dan sekarang menempuh pendidikan di Universitas Gadjah Mada (UGM), angkatan 2026, Program Studi Teknologi Rekayasa Elektro, Sekolah Vokasi, dengan NIM 26/578807/SV/28070.</p>
+      <p>Saya tertarik pada energi terbarukan, khususnya teknologi yang memanfaatkan sumber energi ramah lingkungan secara efektif dan berkelanjutan. Lewat perkuliahan dan pengalaman belajar, saya ingin memperdalam teknik elektro, melatih berpikir kritis dan memecahkan masalah, serta berkontribusi pada teknologi energi yang bermanfaat bagi masyarakat dan lingkungan.</p>
+    </div>
+  </section>
+
+  <!-- SKILLS (EDIT: ganti ikon, judul, dan deskripsi) -->
+  <section id="skills" class="container section">
+    <h2>Skills</h2>
+    <div class="grid">
+      <article class="card"><span class="icon">Py</span><h3>Python Programming</h3><p>Perulangan, logika, dan komputasi numerik dengan NumPy.</p></article>
+      <article class="card"><span class="icon">∫</span><h3>Matematika Teknik</h3><p>Kalkulus, matriks dan vektor, serta statistika.</p></article>
+      <article class="card"><span class="icon">Ω</span><h3>Pengukuran Listrik</h3><p>Mengukur R, L, dan C dengan LCR meter.</p></article>
+      <article class="card"><span class="icon">✓</span><h3>Problem Solving</h3><p>Memecah masalah menjadi langkah yang jelas dan terukur.</p></article>
+      <article class="card"><span class="icon">⇄</span><h3>Kerja Sama Tim</h3><p>Terbiasa berorganisasi dan memimpin tim.</p></article>
+    </div>
+  </section>
+
+  <!-- PROJECTS (EDIT: ganti isi, atau salin satu <article> untuk menambah proyek) -->
+  <section id="projects" class="container section">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card" data-detail="Program Python yang menerima bilangan bulat positif dari pengguna, lalu memeriksa dengan perulangan for apakah bilangan itu prima atau bukan.">
+        <div class="thumb">{ }</div>
+        <h3>Pengecek Bilangan Prima</h3>
+        <p>Program Python untuk memeriksa apakah suatu bilangan termasuk bilangan prima.</p>
+        <p class="tags">Python, perulangan for</p>
+        <button class="btn detail">Lihat Detail</button>
+      </article>
+      <article class="card" data-detail="Pengukuran nilai resistansi (R), kapasitansi (C), dan induktansi (L) komponen listrik menggunakan LCR meter.">
+        <div class="thumb">Ω</div>
+        <h3>Pengukuran R, L, dan C</h3>
+        <p>Mengukur resistansi, kapasitansi, dan induktansi komponen dengan LCR meter.</p>
+        <p class="tags">LCR meter, alat ukur listrik</p>
+        <button class="btn detail">Lihat Detail</button>
+      </article>
+      <article class="card" data-detail="Program operasi hitung matriks dan vektor menggunakan pustaka NumPy pada Python.">
+        <div class="thumb">[ ]</div>
+        <h3>Operasi Matriks dan Vektor</h3>
+        <p>Program hitung matriks dan vektor dengan NumPy.</p>
+        <p class="tags">Python, NumPy</p>
+        <button class="btn detail">Lihat Detail</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT (EDIT: ganti tautan; untuk GitHub/Instagram salin satu <a> lalu ganti href dan teks) -->
+  <section id="contact" class="container section">
+    <h2>Contact</h2>
+    <p class="lead">Silakan hubungi saya untuk diskusi atau kolaborasi.</p>
+    <div class="contacts">
+      <a class="card link" href="mailto:farhanhabib2008@mail.ugm.ac.id"><span class="icon">@</span>farhanhabib2008@mail.ugm.ac.id</a>
+      <a class="card link" href="https://www.linkedin.com/in/farhan-habib-963a4244" target="_blank" rel="noopener"><span class="icon">in</span>LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Farhan Habib. All rights reserved.</div>
+</footer>
+
+<dialog id="dlg">
+  <h3 id="dt"></h3>
+  <p id="dd"></p>
+  <p class="tags" id="dtags"></p>
+  <button class="btn primary" id="close">Tutup</button>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
